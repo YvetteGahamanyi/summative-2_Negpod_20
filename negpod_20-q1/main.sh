@@ -23,3 +23,8 @@ while true; do
             read -p "Enter student email: " email
             read -p "Enter student age: " age
             read -p "Enter student ID: " student_id
+
+            # Create student record
+            echo "$student_id$(printf '%*s' $((id_width - ${#student_id})) " ") | $age$(printf '%*s' $((age_width - ${#age})) " ") | $email$(printf '%*s' $((email_width - ${#email})) " ")" >> "$students_file"
+            echo "Student record created."
+            ;;
