@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#configuration 
+#configuration
 
 HOST="64293e56bc62.3a2627c1.alu-cod.online"
 USERNAME="64293e56bc62"
@@ -20,3 +20,9 @@ fi
 rsync -avz -e "sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no" "$DIRECTORY" "$USERNAME@$HOST:$DESTINATION"
 
 
+# Check rsync exit status
+if [ $? -eq 0 ]; then
+    echo "Backup completed successfully."
+else
+    echo "Error: Backup failed."
+fi
