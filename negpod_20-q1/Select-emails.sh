@@ -12,3 +12,6 @@ selectEmails() {
     echo "Emails of students have been selected, sorted and saved to $student_emails"
     cat $student_emails
 }
+
+# Call the selectEmails function
+selectEmails
