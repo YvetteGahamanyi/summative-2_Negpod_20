@@ -18,3 +18,8 @@ while true; do
 
     read -p "Enter your choice: " choice
 
+    case "$choice" in
+        1)
+            read -p "Enter student email: " email
+            read -p "Enter student age: " age
+            read -p "Enter student ID: " student_id
