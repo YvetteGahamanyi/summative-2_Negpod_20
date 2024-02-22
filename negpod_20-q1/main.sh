@@ -56,3 +56,13 @@ while true; do
          # Select student emails, sort them and save to file
             ./select-emails.sh
             ;;
+    6)
+            # Exit the application
+            echo "Exiting the application."
+            exit 0
+            ;;
+        *)
+            echo "Invalid choice. Please try again."
+            ;;
+    esac
+done
