@@ -36,4 +36,9 @@ while true; do
 	    ;;
 
 	3)
-            read -p "Enter student ID to delete: " delete_id 
+            read -p "Enter student ID to delete: " delete_id
+
+	# Delete student record by student ID
+            sed -i "/ID: $delete_id/d" "$students_file"
+            echo "Student record deleted."
+            ;; 
