@@ -45,4 +45,6 @@ while true; do
 
 	4)
             read -p "Enter student ID to update: " update_id
- 
+	    # Update student record by student ID
+            read -p "Enter updated email: " updated_email
+            read -p "Enter updated age: " updated_age
