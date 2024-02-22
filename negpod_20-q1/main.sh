@@ -33,4 +33,7 @@ while true; do
             echo "List of students:"
             echo -e "ID$(printf '%*s' $((id_width - 2)) " ") | Age$(printf '%*s' $((age_width - 3)) " ")| Email$(printf '%*s' $((email_width - 5)) " ")"
             cat "$students_file"
-            ;;
+	    ;;
+
+	3)
+            read -p "Enter student ID to delete: " delete_id 
