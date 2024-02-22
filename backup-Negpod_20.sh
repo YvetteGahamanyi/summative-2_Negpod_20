@@ -11,4 +11,7 @@ PASSWORD="328d3b338a4ced526c9a"
 DESTINATION="/summative/1023-2024j"
 
 DIRECTORY="negpod_20-q1"
-
+if [ ! -d "$DIRECTORY" ]; then
+    echo "Error: Local directory '$DIRECTORY' does not exist."
+    exit 1
+fi
