@@ -15,3 +15,8 @@ if [ ! -d "$DIRECTORY" ]; then
     echo "Error: Local directory '$DIRECTORY' does not exist."
     exit 1
 fi
+
+#Backup command
+rsync -avz -e "sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no" "$DIRECTORY" "$USERNAME@$HOST:$DESTINATION"
+
+
