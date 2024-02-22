@@ -41,4 +41,8 @@ while true; do
 	# Delete student record by student ID
             sed -i "/ID: $delete_id/d" "$students_file"
             echo "Student record deleted."
-            ;; 
+            ;;
+
+	4)
+            read -p "Enter student ID to update: " update_id
+ 
