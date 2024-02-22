@@ -52,3 +52,7 @@ while true; do
 	     sed -i "/ID: $update_id/c\Email: $updated_email, Age: $updated_age, ID: $update_id" "$students_file"
             echo "Student record updated."
             ;;
+    5) 
+         # Select student emails, sort them and save to file
+            ./select-emails.sh
+            ;;
