@@ -48,3 +48,7 @@ while true; do
 	    # Update student record by student ID
             read -p "Enter updated email: " updated_email
             read -p "Enter updated age: " updated_age
+
+	     sed -i "/ID: $update_id/c\Email: $updated_email, Age: $updated_age, ID: $update_id" "$students_file"
+            echo "Student record updated."
+            ;;
