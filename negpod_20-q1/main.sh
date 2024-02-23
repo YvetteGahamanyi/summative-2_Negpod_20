@@ -43,13 +43,16 @@ while true; do
             ;;
 
 	4)
-            read -p "Enter student ID to update: " update_id
-	    # Update student record by student ID
-            read -p "Enter updated email: " updated_email
-            read -p "Enter updated age: " updated_age
+        # Update student record by student ID
+read -p "Enter student ID to update: " update_id
+read -p "Enter updated student email: " updated_email
+read -p "Enter updated student age: " updated_age
 
-	     sed -i "/ID: $update_id/c\Email: $updated_email, Age: $updated_age, ID: $update_id" "$students_file"
-            echo "Student record updated."
+# Use sed to update the student record
+sed -i "s/^$update_id[[:space:]]*[^|]*|[^|]*|[^|]*/$update_id$(printf '%*s' $((id_width - ${#update_id})) " ") | $updated_age$(printf '%*s' $((age_width - ${#updated_age})) " ") | $updated_email$(printf '%*s' $((email_width - ${#updated_email})) " ")/" "$students_file"
+
+echo "Student record with ID $update_id updated."
+
             ;;
     5) 
          # Select student emails, sort them and save to file
