@@ -54,7 +54,7 @@ while true; do
             ;;
     5) 
          # Select student emails, sort them and save to file
-            ./select-emails.sh
+            ./Select-emails.sh
             ;;
     6)
             # Exit the application
