@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-students_file="Students-list_1023.txt"
+students_file="students-list_1023.txt"
 email_width=20
 age_width=3
 id_width=3
@@ -36,11 +36,10 @@ while true; do
 	    ;;
 
 	3)
-            read -p "Enter student ID to delete: " delete_id
-
 	# Delete student record by student ID
-            sed -i "/ID: $delete_id/d" "$students_file"
-            echo "Student record deleted."
+            read -p "Enter student ID to delete: " delete_id
+            sed -i "/^$delete_id[[:space:]]/d" "$students_file"
+            echo "Student record with ID $delete_id deleted."
             ;;
 
 	4)
@@ -54,7 +53,7 @@ while true; do
             ;;
     5) 
          # Select student emails, sort them and save to file
-            ./Select-emails.sh
+            ./select-emails.sh
             ;;
     6)
             # Exit the application
