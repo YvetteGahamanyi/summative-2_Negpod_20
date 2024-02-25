@@ -3,7 +3,7 @@
 students_file="Students-list_1023.txt"
 student_emails="student-emails.txt"
 
-# Header for the table
+# Header for the student table
 echo "No |  Email" > student-emails.txt
 
 # Function to select emails of students, sort them alphabetically, and save them to student-emails.txt
