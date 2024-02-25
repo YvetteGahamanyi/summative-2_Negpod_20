@@ -2,9 +2,9 @@
 
 #configuration
 
-HOST="64293e56bc62.3a2627c1.alu-cod.online"
-USERNAME="64293e56bc62"
-PASSWORD="328d3b338a4ced526c9a"
+HOST="dcf9e6c69bfe.31ac8d1e.alu-cod.online"
+USERNAME="dcf9e6c69bfe"
+PASSWORD="ea9e45648728e884b89e"
 
 
 # Destination location on the remote server
