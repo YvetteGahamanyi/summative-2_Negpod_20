@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-students_file="Students-list_1023.txt"
+students_file="students-list_1023.txt"
 email_width=20
 age_width=3
 id_width=3
@@ -36,21 +36,23 @@ while true; do
 	    ;;
 
 	3)
-            read -p "Enter student ID to delete: " delete_id
-
 	# Delete student record by student ID
-            sed -i "/ID: $delete_id/d" "$students_file"
-            echo "Student record deleted."
+            read -p "Enter student ID to delete: " delete_id
+            sed -i "/^$delete_id[[:space:]]/d" "$students_file"
+            echo "Student record with ID $delete_id deleted."
             ;;
 
 	4)
-            read -p "Enter student ID to update: " update_id
-	    # Update student record by student ID
-            read -p "Enter updated email: " updated_email
-            read -p "Enter updated age: " updated_age
+        # Update student record by student ID
+read -p "Enter student ID to update: " update_id
+read -p "Enter updated student email: " updated_email
+read -p "Enter updated student age: " updated_age
 
-	     sed -i "/ID: $update_id/c\Email: $updated_email, Age: $updated_age, ID: $update_id" "$students_file"
-            echo "Student record updated."
+# Use sed to update the student record
+sed -i "s/^$update_id[[:space:]]*[^|]*|[^|]*|[^|]*/$update_id$(printf '%*s' $((id_width - ${#update_id})) " ") | $updated_age$(printf '%*s' $((age_width - ${#updated_age})) " ") | $updated_email$(printf '%*s' $((email_width - ${#updated_email})) " ")/" "$students_file"
+
+echo "Student record with ID $update_id updated."
+
             ;;
     5) 
          # Select student emails, sort them and save to file
