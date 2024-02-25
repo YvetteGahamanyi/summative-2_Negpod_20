@@ -13,7 +13,7 @@ while true; do
     echo "2. View all students"
     echo "3. Delete student record"
     echo "4. Update student record"
-    echo "5. Select student emails"
+    echo "5. Sort student emails"
     echo "6. Exit"
 
     read -p "Enter your choice: " choice
