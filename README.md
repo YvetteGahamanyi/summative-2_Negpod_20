@@ -1,4 +1,4 @@
-# ALU Registration System
+# ALU Registration System for student
 
 This simple bash script provides a basic registration system for managing student records. It allows users to create, view, delete, and update student records, as well as select and sort student emails.
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create the target directory if it doesn't exist
-target_dir="negpod_22-q1"
+target_dir="negpod_20-q1"
 mkdir -p "$target_dir"
 
 # Move the files to the target directory
