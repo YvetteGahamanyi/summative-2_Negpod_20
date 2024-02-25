@@ -35,3 +35,5 @@ This simple bash script provides a basic registration system for managing studen
 ```bash
 ./alu-registration-system.sh
 ```
+
+[Report](https://docs.google.com/document/d/1i0So911Id4xi4neaQzYwFk8Wcv5uxmHd31DGvAOcLFs/edit?usp=sharing)
