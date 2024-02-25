@@ -30,7 +30,7 @@ while true; do
             ;;
         2)
             # View all students
-            echo "List of students:"
+            echo "List of all students:"
             echo -e "ID$(printf '%*s' $((id_width - 2)) " ") | Age$(printf '%*s' $((age_width - 3)) " ")| Email$(printf '%*s' $((email_width - 5)) " ")"
             cat "$students_file"
 	    ;;
